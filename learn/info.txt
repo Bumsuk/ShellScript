@@ -1,0 +1,7 @@
+오늘의 날씨는 Sat Mar 28 18:39:36 KST 2020이며,
+현재 로그인 정보는 Login    Name                 TTY  Idle  Login  Time   Office  Phone
+brown    brown               *con  9:33  Sat    09:06
+brown    brown                s00     8  Sat    16:55
+brown    brown                s00        Sat    17:25
+brown    brown                s00        Sat    18:38
+입니다.
