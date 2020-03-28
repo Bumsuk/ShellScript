@@ -191,6 +191,7 @@ copy_artifacts() {
   done <$file_list
 }
 
+
 ARTIFACT_LIST_FILE="${BUILT_PRODUCTS_DIR}/cocoapods-artifacts-${CONFIGURATION}.txt"
 if [ -r "${ARTIFACT_LIST_FILE}" ]; then
   copy_artifacts "${ARTIFACT_LIST_FILE}"
@@ -207,3 +208,5 @@ fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait
 fi
+
+
