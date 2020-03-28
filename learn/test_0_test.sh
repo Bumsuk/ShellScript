@@ -1,4 +1,6 @@
 # test 명령어의 사용
+# 결과가 참이면 0 반환
+
 echo "hahahah" > hello_fail.sh
 chmod +x hello_fail.sh
 test hello_fail.sh | echo "test 결과는 `$?`"
