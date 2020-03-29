@@ -5,7 +5,7 @@ defaultMsg="update files"
 if [ $# = 0 ]; then
   echo "커밋 커멘트를 입력하세요."
 	read comment
-	$defaultMsg=$comment
+	defaultMsg=$comment
 else
   defaultMsg=$1
 fi
@@ -18,4 +18,4 @@ function process() {
   git push
 }
 
-#process
+process
