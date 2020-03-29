@@ -31,7 +31,6 @@ str5=Null
 [ $str5 ]
 echo 결과5: $?
 
-
 # test 로 파일 존재여부 체크
 test -f good.txt; echo 결과6: $?        # 에러가 나던 말던 echo 실행!
 test -f good.txt && echo 결과6: $?      # 에러가 나면 echo 실행 안함!
