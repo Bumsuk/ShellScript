@@ -4,4 +4,4 @@
 2. [sample](sample): 테스트 코드들
 3. [simple-bash-scripts](simple-bash-scripts): 참고 코드!
 
-4. git_push.sh : repo push 슈가 스크립트
+4. [git_push.sh](git_push.sh) : repo push 슈가 스크립트
