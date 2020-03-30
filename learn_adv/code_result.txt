@@ -1,0 +1,29 @@
+brown
+Login    Name                 TTY  Idle  Login  Time   Office  Phone
+brown    brown               *con  6:44  Mon    12:53
+brown    brown                s00    14  Mon    12:53
+brown    brown                s00  3:00  Mon    12:53
+brown    brown                s00  2:08  Mon    12:53
+brown    brown                s00  1:58  Mon    15:55
+000_argument.sh
+000_argument1.sh
+000_array.sh
+000_cleanup.sh
+000_code_block.sh
+000_comma_operator.sh
+000_exit.sh
+000_let.sh
+000_let1.sh
+000_loop.sh
+000_rm_script.sh
+000_show_simple_info.sh
+000_subshell.sh
+000_variable.sh
+000_variable1.sh
+README.md
+code_result.txt
+dummy.txt
+error.sh
+num.txt
+ok.txt
+this_dir_is_advance_learn
