@@ -6,8 +6,6 @@
 # *     - default 와 같다.
 # esac  - case문 종료후 다음 문자 분
 
-
-
 clear
 
 echo "************************************"
@@ -30,5 +28,5 @@ case $cmd in
   2 | b) date;;
   3 | c) pwd;;
   4 | d) ls -1;;
-  *) echo "입력범위 초과"; ;;
+  *) echo "입력범위 초과"; fail ;;
 esac
