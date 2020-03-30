@@ -1,5 +1,7 @@
 #!/bin/bash
 
+clear
+
 for ((i = 32; i >= 0; i--)); do
 	r=$((2 ** $i))
 	Probablity+=($r)
