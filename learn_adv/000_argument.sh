@@ -2,6 +2,8 @@
 
 clear
 
+# [ expr ] 은 test 와 같은 기능
+# if test $# = 0; then
 if [ $# = 0 ]; then
 echo "인자를 입력해!"; exit;
 fi
@@ -11,3 +13,5 @@ fi
 echo "1: $*"
 echo "2: $@"
 
+# 상세설
+# https://ss64.com/bas명h/syntax-parameters.html

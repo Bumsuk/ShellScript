@@ -5,13 +5,19 @@ clear
 
 echo $?
 
+n=10
+for (( i = 0; i < n; i++ )); do
+    echo "반복문 ${i} 번째"
+done
+
+
+
 : # 아무것도 안함
 while :     # while true 와 똑같음.
 do
   sleep 1
   echo "무한루프 출력 라인!"
 done
-
 
 # 여기서의 sleep 명령어의 예
 # sleep .5 # Waits 0.5 second.
