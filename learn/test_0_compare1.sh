@@ -24,3 +24,10 @@ test $val1 -eq $val2; echo "결과1(equal): $?"
 
 [ 1 != 1 ]; echo "결과 c: $?"
 [[ 1 < 1 ]]; echo "결과 d: $?"
+
+
+echo "some file content" > some.txt
+chmod +x some.txt
+file="some.txt"
+[[ -f "${file}" && -x "${file}" ]]; echo "$파일 ${file}은 파일이며, 실행가능합니다! 결과값 : ${$?}"
+rm -rf "${file}"
