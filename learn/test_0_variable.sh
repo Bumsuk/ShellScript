@@ -1,8 +1,8 @@
 # env 환경변수를 보여준다. 전역이며, export 명령과 비슷하다.
-env
+#env
 
 # set 명령으로 로컬로 선언된 변수들 정보 확인가능
-set
+#set
 
 # 로컬 변수는 당연하게도 열린 쉘에서만 접근가능
 # 로컬 변수는 정보를 저장 및 참조하는 측면에서는 환경 변수와 통일하다.
@@ -17,4 +17,10 @@ echo $ppengsu
 # 변수 삭제는 unset 명령
 unset ppengsu
 
+# 이렇게 다양한 방식으로 산술연산 및 할당이 가능하다! 너무 다양해서 문제지... bash 과 오래된 sh과의 호환문제도 있고...
+let num1=10
+(( num2 = num1 + 10 ))
+let "num3 = num1 + num2"
+(( num4 = num3 + 10, num5 = num4 + 10 ))
 
+echo "숫자값 확인 : ${num1} ${num2} ${num3} ${num4} ${num5}"

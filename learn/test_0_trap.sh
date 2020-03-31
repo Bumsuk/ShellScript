@@ -1,4 +1,7 @@
 # trap 명령어 사용
+# [여기 설명 잘되어 있다!]
+# https://www.joinc.co.kr/w/Site/Tip/Signal_trap
+
 
 echo "1111"
 trap echo

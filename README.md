@@ -6,4 +6,4 @@
 4. [simple-bash-scripts](simple-bash-scripts): 참고 코드!
 5. [git_push.sh](git_push.sh) : repo push 슈가 스크립트
 
-*. IntelliJ에서 스크립트 작성시 편하므로, 그걸 사용하자. 
+###### *. IntelliJ에서 스크립트 작성시 편하므로, 그걸 사용하자. 

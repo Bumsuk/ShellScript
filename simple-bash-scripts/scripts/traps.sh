@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# [여기 설명 잘되어 있다!]
+# https://www.joinc.co.kr/w/Site/Tip/Signal_trap
+
 function finish() {
 	# your cleanup here.
 	echo "CTL+C pressed"
