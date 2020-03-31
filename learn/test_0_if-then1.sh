@@ -1,4 +1,7 @@
-#!/bin/sh2
+#!/bin/bash
+
+clear
+
 # 제어문
 #
 ## 명령어 라인에 입력된 인수의 갯수
@@ -19,13 +22,13 @@
 ## 직전에 백그라운드로 실행된 프로세스 PID
 #echo 직전 백그라운드 PID: $!
 
+echo "인수갯수: $#, $@"
 
 # if-then-if : if를 사용했다면 무조건 fi 가 따라와야 한다!
-clear
-
 # 해당 경로에 first.sh 와 if.sh 파일을 준비할것!
 
 #more if.sh
+echo "this if if content" > if.sh
 cat if.sh
 
 if test -f $1; then
