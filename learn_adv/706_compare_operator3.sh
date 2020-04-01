@@ -25,6 +25,11 @@ then
   exit $NOTFOUND
 fi
 
+# # or ## 명령어는 문자열 조각을 삭제하는 명렁 > 이후에 나옴!
+#  stringZ=abcABC123ABCabc # |----| # |----------|
+#  echo ${stringZ#a*C} # 123ABCabc # 'a'와 'C' 사이에서 가장 짧게 일치되는 부분을 삭제.
+#  echo ${stringZ##a*C} # abc # 'a'와 'C' 사이에서 가장 길게 일치되는 부분을 삭제.
+
 if [ ${filename##*.} != "gz" ]
 # 변수 치환인 중괄호를 사용함.
 then
@@ -40,3 +45,5 @@ zcat $1 | most
 exit $?   # 파이프의 종료 상태를 리턴.
 #  스크립트는 어떤 경우든지간에 마지막에 실행된 명령어의 종료 상태를
 #+ 리턴하기 때문에 실제로는 "exit $?"가 필요없습니다.
+
+

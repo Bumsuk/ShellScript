@@ -1,3 +1,7 @@
+#!/bin/bash
+
+clear
+
 # 변수 테스트
 someValue # 로컬 변수 선언 > 선언만!
 echo "변수값 획인해보자."
