@@ -20,8 +20,3 @@ echo "결과4 : " ${arr[1]}
 for i in "${arr[@]}"; do
   echo "[배열값] ${i}"
 done
-
-
-
-
-
