@@ -24,8 +24,9 @@ array=(zero one two three four five)
 
 echo "🤡" ${array[0]} #  zero
 echo ${array:0}  #  zero
+
 #  첫번째 요소의 매개변수 확장.
-echo ${array:1} #  ero > 잘생각해보면 쉽다. array 자체가 첫번째 요소로 치환되고, 그 문자열의 0.1번부터 표시
+echo ${array:1} #  ero > 잘생각해보면 쉽다. array 자체가 첫번째 요소(zero)로 치환되고, 그 문자열의 1번째 문자부터 표시
 #  첫번째 요소의 두 번째 문자에서부터 매개변수 확장.
 
 echo ${#array} #  4

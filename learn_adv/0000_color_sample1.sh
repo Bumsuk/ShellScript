@@ -1,4 +1,5 @@
 #!/bin/bash
+clear
 
 # 색상정보 변수들은 타 파일에서 가져옴.
 source ./0000_color.sh
@@ -22,7 +23,6 @@ echo -e "\033[33;44mYellow text on blue background\033[0m"
 echo -e "\033[1;33;44mBold yellow text on blue background\033[0m"
 echo -e "\033[1;4;33;44mBold yellow underlined text on blue background\033[0m"
 
-echo -e "\033[43;31mSoftware is good!\033[0m"
 echo -e "\033[43;31m나랏말싸미\033[0m"
 
 # 이걸로 하얀색으로 원복!
