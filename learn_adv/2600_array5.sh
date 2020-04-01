@@ -23,4 +23,20 @@ echo "array2 의 요소 갯수 = ${#array2[*]}"  # 0
 
 echo
 
+# 배열 복사.
+array1=(1 2 3)
+array2=( "${array1[@]}" )
+echo "배열체크1 : ${array2[@]}"
+
+# 배열에 원소 추가.
+array1=(1 2 3)
+array1=( "${array1[@]}" "4" )
+echo "배열체크2 : ${array1[@]}"
+
+# 혹은
+array1=(1 2 3)
+array1[${#array1[*]}]=4
+echo "배열체크3 : ${array1[@]}"
+
+
 exit 0  # Thanks, S.C.
