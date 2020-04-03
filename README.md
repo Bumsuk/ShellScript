@@ -15,4 +15,4 @@
    (후자의 경우 패턴매칭 등이 지원되니 그게 편함)
 3. intelliJ 로 스크립트 실행시 설정
    zsh 을 bash 로 각각의 스크립트 실행시에 셋팅해준다. (전역적으로 설정은 안되는듯)
-   ![]
+   ![설정](./IntelliJ_script_exec_setting.png)
