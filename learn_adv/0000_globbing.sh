@@ -13,3 +13,41 @@
 #
 #  Quote 을 하면 단어분리, globbing 둘 다 일어나지 않습니다. >> 이 언급을 확실히 100% 이해하고, 기억해야 함!
 #
+
+
+#  $ ls
+#  address.c      address.h     readObject.c      readObject.h     WriteObject.class
+#  Address.class  Address.java  ReadObject.class  ReadObject.java  WriteObject.java
+#
+#  $ ls *.[ch]
+#  address.c  address.h  readObject.c  readObject.h
+#
+#  $ ls "*.[ch]"         # quote 을 하면 globbing 이 일어나지 않는다
+#  ls: cannot access *.[ch]: No such file or directory
+#
+#  $ echo *.?
+#  address.c address.h readObject.c readObject.h
+#
+#  $ for file in *.[ch]; do
+#        echo "$file"
+#  done
+#
+#  address.c
+#  address.h
+#  readObject.c
+#  readObject.h
+
+
+results=()
+
+# 현재 폴더의 스크립트 파일들 중에서, 07로 시작하는 파일들 검색 및 출력!
+for file in *.sh; do
+  echo "[list] $file"
+  if [[ $file == 07*.sh ]]; then
+    echo "🤡 ${file}"
+    results=("${results[@]}" $file)
+  fi
+done
+
+echo "결과 : results count : ${#results[@]}"
+echo "results : ${results[@]}"
