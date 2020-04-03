@@ -25,7 +25,6 @@ then
   exit $E_NOPARAMS
 fi
 
-
 echo "'locate' 데이타베이스 업데이트중..."
 echo "시간이 걸릴 수 있습니다."
 updatedb /usr &     # 루트로 실행시켜야 됩니다.
