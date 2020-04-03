@@ -4,7 +4,7 @@ clear
 
 # [ expr ] 은 test 와 같은 기능
 # if test $# = 0; then
-if [ $# = 0 ]; then
+if [ $# == 0 ]; then
 echo "인자를 입력해!"; exit;
 fi
 
@@ -17,8 +17,6 @@ echo "3(인수갯수): $#"
 
 str="hahahoho"
 echo "str 문자열수: ${str} > ${#str}"
-
-
 
 
 # 상세설명
