@@ -8,7 +8,7 @@ search=$1
 
 # 현재 폴더의 스크립트 파일들 중에서, 07로 시작하는 파일들 검색 및 출력!
 results=()
-for file in *.sh; do
+for file in *; do
   echo "[list] $file"
   if [[ $file == ${search}* ]]; then
     echo "🤡 ${file}"

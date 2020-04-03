@@ -4,6 +4,7 @@ clear
 # 색상정보 변수들은 타 파일에서 가져옴.
 source ./0000_color.sh
 
+# 이렇게 컬러로 echo 출력을 하려면, echo -e 옵션이 필요! 이스케이프 인식위해 (zsh 에서는 없어도 됨)
 echo -e "${DARKGRAY}다크그레이!"
 echo -e "${RED}빨간색!"
 echo -e "${LIGHTRED}볼드 빨간색!"

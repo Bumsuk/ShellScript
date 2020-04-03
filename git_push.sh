@@ -8,7 +8,7 @@ NC='\033[0m'
 defaultMsg="update files"
 
 if [ $# = 0 ]; then
-  echo "${GREEN}➡️ 커밋 커멘트를 입력하세요.${NC}"
+  echo -e "${GREEN}➡️  커밋 커멘트를 입력하세요.${NC}"
   read comment
   defaultMsg=$comment
 else
@@ -18,10 +18,10 @@ fi
 E_BADARGS=65
 
 if [ ! -n "$defaultMsg" ]; then
-	echo "${RED}🚫 명령을 제대로 입력하세요. 공백은 허용안됨!${NC}"; exit
+	echo -e "${RED}🚫 명령을 제대로 입력하세요. 공백은 허용안됨!${NC}"; exit
 fi
 
-echo "$확정된 msg : $defaultMsg"
+echo -e "$확정된 msg : $defaultMsg"
 
 function process() {
   git add .

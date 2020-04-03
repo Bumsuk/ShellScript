@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# 이렇게 컬러로 echo 출력을 하려면, echo -e 옵션이 필요! (zsh 에서는 없어도 됨)
+
 DARKGRAY='\033[1;30m'
 RED='\033[0;31m'
 LIGHTRED='\033[1;31m'

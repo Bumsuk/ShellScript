@@ -1,1 +1,0 @@
-Accessing the OS X Clipboard Contents with pbpaste
