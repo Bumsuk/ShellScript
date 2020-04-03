@@ -41,17 +41,20 @@ done
 echo
 
 # 좀 더 우아한 방법으로 모든 배열 요소를 다시 나열.
-  echo ${colors[@]}          # echo ${colors[*]}   라고 해도 됩니다.
+  echo "우아한 버전 > " ${colors[@]}          # echo ${colors[*]}   라고 해도 됩니다.
 
 echo
 
 # "unset" 명령어는 배열 요소를 지우거나 배열 전체를 지워줍니다.
-unset colors[1]              # 배열의 두번째 요소를 삭제.
+# >> 여기서 중요!!! colors[12] 라고 했으면, globbing([12]는 1이 선택!)이 되어, colors[1] 이 삭제된다!!!
+# 따라서 여기서 제대로 처리하려면 unset 'colors[1]' 해야 한다!!!!
+unset 'colors[1]'            # 배열의 두번째 요소를 삭제.
+
                              # colors[1]=    라고 해도 됩니다.
 echo  ${colors[@]}           # 배열을 다시 나열하는데 이번에는 두 번째 요소가 빠져있습니다.
 
 unset colors                 # 배열 전체를 삭제.
-                             #  unset colors[*] 나
+                             #  unset colors[*] 나r
                              #+ unset colors[@] 라고 해도 됩니다.
 echo; echo -n "색깔이 없어졌어요."
 echo ${colors[@]}            # 배열을 다시 나열해 보지만 비어있죠.

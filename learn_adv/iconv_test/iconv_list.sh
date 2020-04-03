@@ -1,14 +1,18 @@
 #!/bin/bash
 clear
+
 enc_list=( `iconv --list` )
 
+echo "카운트 : ${#enc_list[@]}"
 
-enc_list=(111 222 333)
-echo ${enc_list[@]}
+for item in "${enc_list[@]}"; do
+  echo "item : $item"
+done
 
-echo "======="
 
 
+
+# echo -n $IFS | hexdump -C
 
 #for item in "${enc_list[@]}"; do
 #  read -a arrItem <<< $item
