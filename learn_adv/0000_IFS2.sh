@@ -13,4 +13,28 @@ echo "============"
 echo -n "$*" | hexdump -C
 echo -n "$@" | hexdump -C
 
-#
+echo "간단 배열 초기화 테스트(IFS 변경)"
+
+# IFS 재지정시, 이렇게 여러개를 지정해 사용할수 있다!
+IFS='\n : *'
+echo -n "$IFS" | hexdump -C
+
+
+#arr=(1:2:3)
+# 이 배열 생성시 \n : *는 필드 구분자로 인식된다!!!
+arr=(1 2 3:4 5:6\n7\n8*9)
+# 결과
+#  item : 1
+#  item : 2
+#  item : 3
+#  item : 4
+#  item : 5
+#  item : 6
+#  item : 7
+#  item : 8
+#  item : 9
+
+echo "arr 요소개소 : ${#arr[*]}"
+for item in ${arr[*]}; do
+  echo "item : ${item}"
+done
