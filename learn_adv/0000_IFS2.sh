@@ -1,17 +1,14 @@
 #!/bin/bash
 
-clear
-
 # 기존 IFS(내부 필드 구분자 : 기본값 공백 / 탭 / 줄바꿈)는 백업하고 진행
-#IFS_BAK=$IFS
-#IFS=':'
+# IFS_BAK=$IFS
+# IFS=':'
 
-echo "현재 IFS값 : `echo -n $IFS | hexdump -C`"
+echo "현재 IFS값"
+echo -n $IFS | hexdump -C
+
 echo "입력 인자들 확인 - 갯수: ${#}"
 echo "============"
-
-echo -n "$*" | hexdump -C
-echo -n "$@" | hexdump -C
 
 echo "간단 배열 초기화 테스트(IFS 변경)"
 
@@ -34,7 +31,7 @@ arr=(1 2 3:4 5:6\n7\n8*9)
 #  item : 8
 #  item : 9
 
-echo "arr 요소개소 : ${#arr[*]}"
+echo "arr 요소갯수 : ${#arr[*]}"
 for item in ${arr[*]}; do
   echo "item : ${item}"
 done
