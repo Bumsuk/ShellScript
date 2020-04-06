@@ -29,6 +29,7 @@ echo ${hello}
 # 즉, 여기서 배열 선언을 할때 기존은 공백문자로 배열요소를 구분하는게 아니라, 개행문자로 하길 원하는 경우가 있다.
 # 여기서는 IFS 변경전이므로 arr의 요소는 my name is john .. 이렇게 공백별로 인식되어 저장됨
 arr=(`cat test.txt`)
+echo "arr 요소들 확인"
 echo ${arr[0]}
 echo ${arr[1]}
 echo ${arr[2]}
@@ -42,19 +43,15 @@ echo "🤡IFS 확인1🤡"
 echo $IFS | hexdump -C
 
 
-# 기존 IFS 값 백업 > 이 방법보다 간단하게 한줄로 임시 변경도 가능(0000_IFS3.sh 참고)
+# 기존 IFS 값 백업 > 이 방법보다 간단하게 한줄로 임시 변경도 가능(IFS3.sh 참고)
 IFS_BAK="${IFS}"
 IFS=$'\n'
 
 echo "🤡IFS 확인2🤡"
 echo $IFS | hexdump -C
 
-
 # 배열 생성
 arr=(`cat test.txt`)
-
-# IFS 복구
-IFS="${IFS_BAK}"
 
 # 개행문자로 배열 요소가 저장됨을 확인
 echo ${arr[0]}
@@ -62,6 +59,9 @@ echo ${arr[1]}
 echo ${arr[2]}
 
 echo "> 개행문자를 기준으로 배열의 요소가 저장됨을 확인!"
+
+# IFS 복구
+IFS="${IFS_BAK}"
 
 # test.txt 파일 삭제
 rm -rf test.txt

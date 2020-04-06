@@ -8,6 +8,7 @@
 #
 #  예 16-2. 재지향된 while 루프
 
+
 if [ -z "$1" ]
 then
   Filename=names.data  # 파일이름이 지정되지 않을 경우의 기본값.
@@ -17,17 +18,16 @@ fi
 # Filename=${1:-names.data}
 # 라고 해도 됩니다(매개변수 치환).
 
+echo "확정된 파일이름 : ${Filename}"
+
 count=0
 
-echo
-
-while [ "$name" != "Smith" ]  # $name 을 왜 쿼우트 했을까요?
+# while [ "$name" != "Smith" ]  # $name 을 왜 쿼우트 했을까요?
+while read name
 do
-  read name                   # 표준입력이 아니라 $Filename 에서 읽음.
   echo $name
   let "count += 1"
-done  <"$Filename"           # 표준입력을 $Filename 파일로 재지향.
-#    ^^^^^^^^^^^^
+done  < "$Filename"           # 표준입력을 $Filename 파일로 재지향.
 
 echo; echo "$count 개의 이름을 읽었습니다."; echo
 
