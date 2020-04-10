@@ -3,6 +3,8 @@
 RED='\033[1;31m'
 NC='\033[0m'
 
+# 특정 명령어(여기서는 xcodebuild) 를 실행해 결과가 나온다면, ($? 값이 0) 설치되어 있다고 체크함.
+# 여기서 표준에러(2)를 1로 바꿔서 출력안하는 이유는 명령어 결과값이 에러2 번으로 출력되나보다.
 if xcodebuild -usage > /dev/null 2>&1; then
   echo -e "xcodebuild 설치되어 있네"
 else

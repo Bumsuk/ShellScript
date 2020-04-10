@@ -25,8 +25,12 @@ info() {
     echo -e "${GREEN}▶ $1${NC}"
 }
 
+# 신기하게 구현되어 있다.  rxswift clone 작업시
+# 또 주의할것은 함수 내부의 $1 인자는 스크립트의 인자가 아니라, 함수로 전달된 첫번째 인자를 뜻한다.
 loader() {
     printf "${BLUE}"
+    # kill -0 명령은 해당 백그라운드 프로세서를 죽이는 것이 아니라, 살아있는지를 체크하는 것!
+    # https://imdsoho.tistory.com/entry/kill-%EB%AA%85%EB%A0%B9%EC%96%B4-%EC%8B%9C%EA%B7%B8%EB%84%90
     while kill -0 $1 2>/dev/null; do
         printf  "▓"
         sleep 1
