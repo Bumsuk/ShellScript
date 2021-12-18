@@ -21,4 +21,3 @@
    ![설정](./IntelliJ_script_exec_setting.png)
 
 ### 앞으로는 GPG로 커밋해 관리함(2020.04.25)
-
